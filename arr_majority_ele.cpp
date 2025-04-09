@@ -1,85 +1,44 @@
-/*Given an array nums of size n, return the majority element.
-The majority element is the element that appears more than ⌊n / 2⌋ 
-times. You may assume that the majority element always exists in the array.
- */
+// Given an array nums of size n, return the majority element.
+// The majority element is the element that appears more than ⌊n / 2⌋ times.
+// You may assume that the majority element always exists in the array.
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-int majorityElement(vector<int> nums)  // brute force approach, O(n^2)
+// Function to find the majority element using the brute force approach with O(n^2) time complexity
+int majorityElement(vector<int> nums)
 {
-    int i, j, ans=0;
-    int n=nums.size();
-    for(i=0; i<n; i++)
+    int i, j, ans = 0; // Variables for iteration and storing the result
+    int n = nums.size(); // Get the size of the array
+    for (i = 0; i < n; i++) // Iterate through the array
     {
-        int  count=0;
-        for(j=i+1; j<n; j++)
+        int count = 0; // Counter to count the occurrences of nums[i]
+        for (j = i + 1; j < n; j++) // Check all elements after nums[i]
         {
-            if(nums[i]==nums[j])
+            if (nums[i] == nums[j]) // Increment count if there is a match
             {
                 count++;
             }
         }
-        if(count>=n/2)
+        if (count >= n / 2) // Check if the count exceeds n/2
         {
-            ans=nums[i];
+            ans = nums[i]; // Update the majority element
         }
     }
-    return ans;
+    return ans; // Return the majority element
 }
 
-// int majorityElement(vector<int> nums) // two pointer will work only if the array is sorted
-// {
-//     int n=nums.size();
-//     int st=0, en=n-1,count=0, ans;
-
-//     while(st<en)
-//     {
-//         if(nums[st]==nums[en])
-//             {
-//                 count++;
-//                 en--;
-//             }
-//         }
-//         if(count>=n/2)
-//         {
-//             ans=nums[i];
-//         }
-//     }
-// }
-
-// int majorityElement(vector<int>& nums)  // optimal approach, O(nlogn) time complexity
-// {                                       // nlogn for sorting + O(n) for traversing the array
-//     sort(nums.begin(), nums.end());
-//     int st = 0, en = nums.size() - 1;
-    
-//     // Since the majority element is guaranteed to appear more than n/2 times,
-//     // we can safely return the middle one
-//     return nums[(st + en) / 2];
-// }
-
-
-// int majorityElement(vector<int>& nums) // optimal approach, O(nlogn) time complexity
-// // using sorting
-// // using the fact that the majority element will be at the middle of the sorted array
-// {
-//     int n=nums.size();
-//     sort(nums.begin(), nums.end());
-//     return nums[n/2];
-// }
-
+// Main function to test the majority element function
 int main()
 {
-    vector<int> arr={2,2,1,1,1,2,2};
-    // vector<int> arr={3,2,3};
-    // vector<int> arr={1,2,3,4,5,6,7,8,9};
-    // vector<int> arr={1,1,2,2,3,3,4,4,5,5};
+    vector<int> arr = {2, 2, 1, 1, 1, 2, 2}; // Example array
+    // vector<int> arr = {3, 2, 3}; // Uncomment for another test case
+    // vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9}; // Uncomment for another test case
+    // vector<int> arr = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5}; // Uncomment for another test case
 
-    cout<<"the majority element is "<<majorityElement(arr)<<endl;
+    cout << "The majority element is " << majorityElement(arr) << endl; // Print the result
 
-    return 0;
+    return 0; // End of program
 }
-
-// optimal approach in leet169
