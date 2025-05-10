@@ -7,7 +7,7 @@ int main()
     // Different vector initializations
     vector<int> vec1;              // empty vector
     vector<int> vec2 = {1, 2, 3};  // vector with values
-    vector<int> vec3(3, 1);        // vector with only one value (1), 3 times → [1, 1, 1]
+    vector<int> vec3(3, 1);        // vector with initial size=3 and all elements 1 -> [1, 1, 1]
     vector<int> vec4(3);           // vector with 3 elements, default value is 0 → [0, 0, 0]
 
     // Accessing elements with [] — no bounds checking!
@@ -51,5 +51,7 @@ int main()
     cout << "vec4.at(0): " << vec4.at(0) << ", vec4.at(1): " << vec4.at(1) << ", vec4.at(2): " << vec4.at(2) << endl;
     // Works just like [], but avoids undefined behavior if index is invalid
 
+    vec1.push_back(10); // Add 10 to vec1
+    vec1.push_back(20); // Add 20 to vec1   
     return 0;
 }
