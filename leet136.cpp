@@ -7,7 +7,7 @@ You must implement a solution with a linear runtime complexity and use only cons
 #include <vector>
 using namespace std;
 
-// Define a class Solution to solve the problem
+// using bit manipulation
 class Solution {
     public:
         // Function to find the single unique number in the vector
