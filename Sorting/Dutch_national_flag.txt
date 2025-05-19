@@ -1,0 +1,68 @@
+Dutch National Flag Algorithm (Made Simple)
+
+🧠 What is it?
+
+• Imagine you have a basket filled with red, white, and blue balls all mixed up. 
+  You want to sort them so all reds come first, then whites, then blues — like the Dutch flag.
+
+• In programming, we represent them as:
+    Red → 0
+    White → 1
+    Blue → 2
+
+>The goal is to sort an array of 0s, 1s, and 2s in one pass, without using extra space.
+
+📌 When do we use this?
+⇒ When you're given an array with only three types of values, and you want to sort them quickly and in-place.
+
+🧩 How does it work?
+⇒ We use three pointers to divide the array into sections:
+
+    low  → where 0s should go
+    mid  → the current number we're checking
+    high → where 2s should go
+We go through the array from left to right using the mid pointer, and depending on what we find:
+
+🔁 Rules:
+Value at mid	Action
+     0	        Swap it with low, move both low and mid forward
+     1	        It’s in the right place, just move mid
+     2	        Swap it with high, move high backward (don’t move mid yet)
+     
+This keeps pushing 0s to the left, 2s to the right, and leaves 1s in the middle.
+
+✍️ Let's see an example:
+    nums = [2, 0, 2, 1, 1, 0]
+            0  1  2  3  4  5
+∎Initial positions:
+    low = 0 (index)
+    mid = 0 (index)
+    high = 5 (index)
+
+∎Step-by-step dry run:
+   Step	     nums	           low  mid	high	Action
+    1	[2, 0, 2, 1, 1, 0]	    0	0	5	    2 → swap with nums[high]
+    2	[0, 0, 2, 1, 1, 2]	    0	0	4	    0 → swap with nums[low]
+    3	[0, 0, 2, 1, 1, 2]	    1	1	4	    0 → swap with nums[low]
+    4	[0, 0, 2, 1, 1, 2]	    2	2	4	    2 → swap with nums[high]
+    5	[0, 0, 1, 1, 2, 2]	    2	2	3	    1 → move mid forward
+    6	[0, 0, 1, 1, 2, 2]	    2	3	3	    1 → move mid forward
+    7	mid = 4 > high = 3				        Done!
+
+■Final result:
+    [0, 0, 1, 1, 2, 2]
+
+
+✅ Key points to remember:
+   > This sorts the array in one pass → 🕒 O(n) time
+   > No extra space → 💾 O(1) space
+   > Only works when the array has three types of values
+   > Think of it like pushing 0s to the left, 2s to the right, and leaving 1s in place
+
+🧠 How to remember it:
+"0s to the left, 2s to the right, 1s just stay."
+
+If you ever forget how it works, just think of sorting red-white-blue balls into flag order, 
+and this three-pointer trick will come back to you.
+
+Let me know if you'd like a visual diagram to go with this!
