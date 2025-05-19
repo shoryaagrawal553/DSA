@@ -5,7 +5,7 @@ You want to maximize your profit by choosing a single day
 to buy one stock and choosing a different day in the future to sell that stock.
 
 Return the maximum profit you can achieve from this transaction.
- If you cannot achieve any profit, return 0.  */
+If you cannot achieve any profit, return 0.  */
 
 #include<iostream>
 #include<vector>
@@ -38,7 +38,7 @@ using namespace std;
             // vector<int> prices = {7,1,5,3,6,4};    // Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5
             // vector<int> prices = {7, 6, 4, 3, 1};  // No profit possible
             vector<int> prices = {3, 2, 6, 1, 4};     // Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4
-            // vector<int> prices = {2, 4, 1};         // Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2
+            // vector<int> prices = {2, 4, 1};        // Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2
 
             cout << "Maximum profit: " << maxProfit(prices) << endl;
             return 0;
