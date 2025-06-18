@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+ 
 int BinSearch(int tar, int arr[], int st, int en)
 {
     if(st<=en)
