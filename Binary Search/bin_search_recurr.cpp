@@ -5,8 +5,12 @@ int BinSearch(int tar, int arr[], int st, int en)
 {
     if(st<=en)
     {
-
         int mid= st+ (en-st)/2;
+
+        if(tar== arr[mid])
+        {
+            return mid;
+        }
 
         if(tar<arr[mid])
         {
@@ -16,11 +20,6 @@ int BinSearch(int tar, int arr[], int st, int en)
         else if(tar> arr[mid])
         {
             return BinSearch(tar, arr, mid+1, en);
-        }
-
-        else if(tar== arr[mid])
-        {
-            return mid;
         }
     }
     return -1; // if the element is not found
