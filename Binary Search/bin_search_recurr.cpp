@@ -5,7 +5,7 @@ int BinSearch(int tar, int arr[], int st, int en)
 {
     if(st<=en)
     {
-        int mid= st+ (en-st)/2;
+        int mid= st+ (en-st)/2; 
 
         if(tar== arr[mid]) 
         {
