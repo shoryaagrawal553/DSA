@@ -1,4 +1,4 @@
- #include <iostream> // Include the standard input/output stream library
+#include <iostream> // Include the standard input/output stream library
 using namespace std; // Use the standard namespace for convenience
 
 int main()
