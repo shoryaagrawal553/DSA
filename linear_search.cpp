@@ -9,7 +9,7 @@ int main()
 
     // Prompt the user to enter the target value to search for
     cout << "enter the target ";
-    cin >> target; // Read the target value from the user
+    cin >> target; // Read the target value from the user 
 
     // Iterate through the array to find the target value
     for (i = 0; i < n; i++)
