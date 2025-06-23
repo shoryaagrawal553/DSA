@@ -4,7 +4,7 @@ using namespace std; // Use the standard namespace for convenience
 int main()
 {
     int n = 6; // Define the size of the array
-    int arr[n] = {5, 34, 22, 1, 61, 36}; // Initialize the array with sample values
+    int arr[n] = {5, 34, 22, 1, 61, 36}; // Initialize the array with sample values 
     int i, target; // Declare variables for iteration and the target value
 
     // Prompt the user to enter the target value to search for
