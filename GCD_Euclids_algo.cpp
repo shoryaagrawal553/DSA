@@ -2,9 +2,9 @@
 // repeatedly replacing the larger number by the remainder of the division of the larger 
 //number by the smaller number
 // until one of the numbers becomes zero. The other number at that point is the GCD
-
+ 
 #include <iostream>
-using namespace std;
+using namespace std; 
 
 int gcd(int a, int b)
 {
