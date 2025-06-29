@@ -4,7 +4,7 @@
 // until one of the numbers becomes zero. The other number at that point is the GCD
   
 #include <iostream>  
-using namespace std; 
+using namespace std;  
 
 int gcd(int a, int b)
 {
