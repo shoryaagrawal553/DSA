@@ -9,7 +9,7 @@ int gcd(int a, int b)
         {
             a=a%b; 
         }
-        else{
+        else{ 
             b=b%a;
         }
     }
