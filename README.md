@@ -1,7 +1,7 @@
 # 🚀 DSA in C++ 🎯
 
 Welcome to your one-stop shop for all things **Data Structures and Algorithms** in C++!  
-Whether you’re a coding ninja 🥷, prepping for interviews 💼, or just flexing those brain muscles 🧠, you’re in the right place.
+Whether you’re a coding ninja , prepping for interviews 💼, or just flexing those brain muscles 🧠, you’re in the right place.
 
 ---
 
