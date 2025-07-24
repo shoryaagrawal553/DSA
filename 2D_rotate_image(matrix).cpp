@@ -11,7 +11,7 @@ Output: [[7,4,1],[8,5,2],[9,6,3]]   */
 #include<algorithm>
 using namespace std;
 
-void rotate(vector<vector<int>>& mat)
+void rotate(vector<vector<int>>& mat)  // without using uxiliary matrix
 {
     int n= mat.size();
 
