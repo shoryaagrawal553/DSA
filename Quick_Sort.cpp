@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int partition (vector<int> &arr, int st, int en)
+int partition (vector<int> &arr, int st, int en)  // in ascending order 
 {
     int pos= st;
     int pivot = arr[en];  // taking end element as pivot
@@ -23,7 +23,7 @@ void quickSort(vector<int> &arr, int st, int en)
 {
     if(st>=en)  // base case
         return;
-    int pivot= partition (arr, st, en);  // 4 index of pivot
+    int pivot= partition (arr, st, en);  // for index of pivot
 
     quickSort(arr, st, pivot-1);  // left half
     quickSort(arr, pivot+1, en);  // right half
