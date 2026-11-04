@@ -18,7 +18,7 @@ int maxProfit(vector<int>& prices)
     int n= prices.size();
     int maxPrice=0, bestBuy=prices[0]; // Initialize bestBuy to the first price 
     // maxPrice to 0 as we haven't made any transactions yet
-    // Iterate through the prices starting from the second day
+    // Iterate through the prices starting from the second day 
 
     for(int i=1; i<n; i++)   //{3, 2, 6, 1, 4}
     {
