@@ -5,12 +5,13 @@ class Node  // blueprint/structure/skeleton for a node of LL
 {
     public:
     int data;
-    Node* next; // a next pointer
+    //Node* next = NULL; // a next pointer
+    Node* next = nullptr; // from C++11 onwards, we can use nullptr instead of NULL (which is a macro) to represent a null pointer. It is type-safe and avoids some issues that can arise with NULL.
 
     Node(int val)
     {
         data = val;
-        next = NULL;
+        //next = NULL; // instead of explicitly declaring next as NULL in the constructor, we can also do it in the class definition itself (as done in the DLL_insertion_at_any.cpp file)
     }
 };
 
